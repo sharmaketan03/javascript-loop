@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>kishan</p>
+    <p>ujwal</p>
+    <p>ketan</p>
+    <p>abhishek</p>
+    <h2></h2>
+    <script>
+        // let para=document.querySelector("p")
+    
+        // para.onmouseover=function(){
+        //        para.style.height="200px"
+        //        para.style.width="200px"
+        //        para.style.border="2px solid"
+        //        para.style.padding="0.2rem"
+        //        para.style.backgroundColor="red"
+        //        para.style.marginLeft="2rem"
+        //        para.style.textAlign="center"
+        // }
+        // para.onmouseout=function(){
+            
+        //     para.style.height="16px"
+        //        para.style.width="200px"
+        //        para.style.padding="0rem"
+        //        para.style.border="0px solid"
+        //        para.style.backgroundColor="#fff"
+        //        para.style.marginLeft="0rem"
+        //        para.style.textAlign="left"
+              
+               
+              
+        // }
+        let para=document.querySelectorAll("p")
+        let head=document.querySelector("h2")
+        for(let i=0;i<para.length;i++){
+                 para[i].onclick=function(){
+                    show(this)
+                 }
+        }
+        function show(pre){
+               head.innerHTML=pre.innerHTML
+        }
+
+    </script>
+    <!-- execution-context: who is  calling the code where "this" is written.the "this" keyword points to that executing -->
+    <!-- this is a pointer to points the object -->
+</body>
+</html>

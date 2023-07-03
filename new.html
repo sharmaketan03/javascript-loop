@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="new.css">
+</head>
+<body>
+    <div id="wrapper">
+               <div id="accordion">
+                    <div class="accord">
+                        <h2>Accordion 1<i class="fa-solid fa-square-plus"></i></h2>
+                        <p class="active">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dicta fuga est consequatur debitis atque nemo! Eveniet tempore optio saepe tempora dolorem, atque corporis nam possimus quod nisi quos nihil.</p>
+                    </div>
+                    <div class="accord">
+                        <h2>Accordion 2<i class="fa-solid fa-square-plus"></i></h2>
+                        <p>Natus soluta, doloribus ducimus blanditiis dignissimos itaque aut obcaecati, mollitia labore ipsum maiores similique incidunt corrupti alias assumenda laborum nobis hic eos facere impedit sequi omnis laboriosam expedita. Natus, repellat!</p>
+                    </div>
+                    <div class="accord">
+                        <h2>Accordion 3<i class="fa-solid fa-square-plus"></i></h2>
+                        <p>Minus molestiae consectetur maiores incidunt voluptatum accusantium quibusdam repellendus assumenda? Neque qui deserunt eius culpa, doloremque iure, voluptatum voluptate a quia animi fugit, ab est odio. Velit sapiente laudantium officia.</p>
+                    </div>
+                    <div class="accord">
+                        <h2>Accordion 4<i class="fa-solid fa-square-plus"></i></h2>
+                        <p>Sunt aliquam, nulla alias perferendis et laborum in adipisci ex? Laboriosam veniam velit quisquam dolore nulla accusantium molestiae minima corrupti facilis tempore hic, natus earum omnis harum maxime ipsa! Minus!</p>
+                    </div>
+                    <div class="accord">
+                        <h2>Accordion 5<i class="fa-solid fa-square-plus"></i></h2>
+                        <p>Sapiente adipisci repellendus, non vel reprehenderit dolorum praesentium sit in! Et officia suscipit commodi amet deleniti provident mollitia facere ab doloremque possimus tempore, similique esse tenetur itaque totam earum accusamus.</p>
+                    </div>
+               </div>
+    </div>
+    <script>
+        const icons=document.querySelectorAll(".accord i")
+        const para=document.querySelectorAll(".accord p")
+        for(let i=0;i<icons.length;i++){
+            icons[i].onclick=function(){
+                //check if the neighbor para has class active
+                //if it is does,remove it, otherwise add is
+                if(para[i].classList.contains("active")){
+                    para[i].classList.remove("active")
+                    //change minus to plus
+                    icons[i].classList.remove("fa-square-minus")
+                    icons[i].classList.add("fa-square-plus")
+                }
+                else{
+                    //first close any open para
+                    //i.e ask all paragraphs which has an active class
+                    for(let j=0;j<para.length;j++){
+                          if(para[j].classList.contains("active")){
+                            para[j].classList.remove("active")
+                          }
+                    }
+                    para[i].classList.add("active")
+
+                    //change plus to minus
+                    icons[i].classList.add("fa-square-minus")
+                    icons[i].classList.remove("fa-square-plus")
+                }
+            }
+           
+        }
+    </script>
+</body>
+</html>
+//DOM manipulation
+//parentElement,previousElemtentsibling,NextElementSibling,firstchild,last-child
+//children

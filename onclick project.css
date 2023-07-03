@@ -1,0 +1,16 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}       
+body{
+    background-color:rgb(197, 69, 90);
+}
+#wrapper div{
+     border:2px solid;
+     width:700px;
+     height:40px;
+     display:flex;
+     justify-content:space-between;
+     align-items:center;
+}

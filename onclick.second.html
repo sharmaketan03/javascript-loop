@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tabbing{
+            margin:3rem auto;
+            width:60%;
+        }
+       div.active{
+            display:block;
+        }
+         .content{
+              display:none;
+         }
+        
+         button{
+               
+               border-radius:5px;
+               padding:0.7rem;
+               font-weight:bold;
+               box-shadow:0 0 2px 3px rgba(0,0,0.4);
+         }
+         button.active{
+               background-Color:skyblue;
+         }
+
+    </style>
+</head>
+<body>
+   <div class="tabbing">
+    <div class="tabs">
+      <button class="active">HTML</button>
+      <button>React</button>
+      <button>CSS</button>
+      <button>Javascript</button>
+      <button>Node</button>
+    </div>
+
+    <div class="content">
+      <div class="active">
+        <h4>HTML</h4>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
+          adipisci? Quisquam maiores omnis et ea, expedita amet rem quia,
+          veniam labore obcaecati adipisci doloribus corporis itaque sapiente
+          vitae vero fuga?
+        </p>
+      </div>
+
+      <div>
+        <h4>React</h4>
+        <p>
+          Soluta odit ipsam dolores consectetur fugit excepturi repudiandae in
+          placeat id, commodi expedita quisquam perspiciatis accusamus
+          voluptates quam culpa voluptatum hic corrupti aspernatur amet
+          aliquam ex labore cupiditate. Culpa, iste!
+        </p>
+      </div>
+
+      <div>
+        <h4>CSS</h4>
+        <p>
+          Pariatur maiores libero suscipit quae perspiciatis, sint doloribus
+          modi veritatis ratione esse commodi repudiandae ipsa eius ea dolor
+          voluptates omnis nulla soluta voluptatum! Ad fugiat, numquam dolores
+          iusto quidem mollitia.
+        </p>
+      </div>
+
+      <div>
+        <h4>Javascript</h4>
+        <p>
+          Harum perferendis eius explicabo quae natus aut vitae iste adipisci
+          aspernatur vel a iure quasi beatae fugit sint accusamus rerum
+          molestias tenetur, sed dolorem inventore quo. Et quidem doloribus
+          reiciendis!
+        </p>
+      </div>
+
+      <div>
+        <h4>Node</h4>
+        <p>
+          Impedit, incidunt inventore? Recusandae voluptas autem sapiente
+          provident eveniet a cum deleniti aspernatur repellendus, et, debitis
+          totam quos? Praesentium molestiae quidem nulla voluptatem nihil,
+          consequuntur cum fuga quod veritatis sed!
+        </p>
+      </div>
+    </div>
+  </div>
+<script>
+       let buttons=document.querySelectorAll("button")
+       let divs=document.querySelectorAll(".content div")
+       for(let i=0;i<buttons.length;i++){
+        // console.log("ketan")
+        
+        buttons[i].onclick=()=>{
+                  for(let j=0;j<buttons.length;j++){
+                    if(buttons[j].classList.contains("active")){
+                         buttons[j].classList.remove("active");
+                      }
+
+                     
+                  }
+                  buttons[i].classList.add("active")
+                  // for(let k=0;k<divs.length;k++){
+                  //    if(divs[k].classList.contains("active")){
+                  //       divs[k].classList.remove("active")
+                  //    }
+                  // }
+                  // divs[i].classList.add("active")
+                 
+        }
+       }
+       
+</script>
+</body>
+</html>

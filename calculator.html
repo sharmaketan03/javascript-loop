@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrapper">
+        <input type="text" placeholder="enter your frst value" class="frst">
+        <input type="text" placeholder="enter your second value" class="second">
+       
+         <select selected>
+            <option value="+" >Add</option>
+            <option value="-">substract</option>
+            <option value="/">divide</option>
+            <option value="%">modulas</option>
+            <option value="*">multiplication</option>
+            <option value="**">exponentaion</option>
+        </select>
+        <p></p>
+    </div>
+    <script>
+         let a=Number(document.querySelector(".frst").value)
+         let b=Number(document.querySelector(".second").value)
+         let c=document.querySelector("select")
+         let para=document.querySelector("p")
+         let d=1
+          c.onchange=()=>{
+                       var x=c.value
+                        switch(x!=0){
+                            case x=="+":para.innerText=a+b
+                                     break;
+
+                             case x=="-":para.innerHTML=a-b;
+                                         break;
+                             case x=="/":para.innerHTML=a/b;
+                                         break;
+                             case x=="%":para.innerHTML=a%b;
+                                         break;
+                            case x=="*":para.innerHTML=a*b;
+                                         break;
+                            case x=="**":para.innerHTML=a**b;
+                                         break;
+                        }
+          }
+         
+         
+         
+            
+        
+         
+        
+
+                               
+         
+      
+       
+
+      
+       
+    </script>
+</body>
+</html>

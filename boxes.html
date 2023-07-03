@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boxes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="boxes.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="box">
+            <div class="heading">
+                <h2>Heading <i class="fa-solid fa-plus"></i></h2>
+            </div>
+            <div class="content">
+                <img src="https://placeholder.pics/svg/300x150/5DFF1B-71FFC6/622FFF-535353/JS%20is%20awesome" alt=""
+                    class="article">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum debitis labore iusto
+                    explicabo deleniti quam
+                    perspiciatis alias. Unde consectetur fugiat sit, suscipit earum commodi quam pariatur eveniet omnis
+                    repudiandae iure.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi quasi esse
+                    nesciunt magni cum adipisci
+                    ipsam! Sint, illo qui molestiae magnam dolor minima sequi incidunt facere ex animi harum dolorem?
+                </p>
+                <a href="" class="toggle">Show</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="heading">
+                <h2>Heading <i class="fa-solid fa-plus"></i></h2>
+            </div>
+            <div class="content">
+                <img src="https://placeholder.pics/svg/300x150/5DFF1B-71FFC6/622FFF-535353/JS%20is%20awesome" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum debitis labore iusto explicabo
+                    deleniti quam
+                    perspiciatis alias. Unde consectetur fugiat sit, suscipit earum commodi quam pariatur eveniet omnis
+                    repudiandae iure.</p>
+                <p >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi quasi esse nesciunt magni cum
+                    adipisci
+                    ipsam! Sint, illo qui molestiae magnam dolor minima sequi incidunt facere ex animi harum dolorem?
+                </p>
+                <a href="" >Show</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="heading">
+                <h2>Heading <i class="fa-solid fa-plus"></i></h2>
+            </div>
+            <div class="content">
+                <img src="https://placeholder.pics/svg/300x150/5DFF1B-71FFC6/622FFF-535353/JS%20is%20awesome" alt="">
+                <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum debitis labore iusto explicabo
+                    deleniti quam
+                    perspiciatis alias. Unde consectetur fugiat sit, suscipit earum commodi quam pariatur eveniet omnis
+                    repudiandae iure.</p>
+                <p >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi quasi esse nesciunt magni cum
+                    adipisci
+                    ipsam! Sint, illo qui molestiae magnam dolor minima sequi incidunt facere ex animi harum dolorem?
+                </p>
+                <a href="" >Show</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="heading">
+                <h2>Heading <i class="fa-solid fa-plus"></i></h2>
+            </div>
+            <div class="content">
+                <img src="https://placeholder.pics/svg/300x150/5DFF1B-71FFC6/622FFF-535353/JS%20is%20awesome" alt="">
+                <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum debitis labore iusto explicabo
+                    deleniti quam
+                    perspiciatis alias. Unde consectetur fugiat sit, suscipit earum commodi quam pariatur eveniet omnis
+                    repudiandae iure.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi quasi esse nesciunt magni cum
+                    adipisci
+                    ipsam! Sint, illo qui molestiae magnam dolor minima sequi incidunt facere ex animi harum dolorem?
+                </p>
+                <a href="" class="toggle">Show</a>
+            </div>
+        </div>
+    </div>
+    <!--children, parentelement,nextelementsibling,previouselementsibling, -->
+    <script>
+        let plus = document.querySelectorAll("i")
+        for(let i=0;i<plus.length;i++){
+           plus[i].onclick=()=>{
+                plus[i].parentElement.parentElement.nextElementSibling.children[0].style.display="none"
+                plus[i].parentElement.parentElement.nextElementSibling.children[1].style.display="none"
+                plus[i].parentElement.parentElement.nextElementSibling.children[2].style.display="none"
+                plus[i].parentElement.parentElement.nextElementSibling.children[3].style.display="block"
+              }
+        }
+        
+        // console.log(divs)
+   e.prevent default
+       
+            
+
+
+
+        
+
+    </script>
+
+</body>
+
+</html>

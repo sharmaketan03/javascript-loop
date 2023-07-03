@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrapper{
+            width:70%;
+            margin:3rem auto;
+        }
+        #wrapper1 div{
+               
+               height:20px 90px;
+               border:2px solid;
+               box-shadow:0 0 2px 3px rgba(0,0,0.4) ;
+               display:none;
+        }
+        #wrapper .article{
+            display:block;
+        }
+        .buttons button{
+                 font-weight:bold;
+                 padding:0.7rem;
+                 margin-bottom:3rem;
+                 box-shadow:0 0 2px 3px skyblue ;
+        }
+         .article1{
+            background-color:skyblue;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="buttons">
+            <button class="article1">html</button>
+            <button>css</button>
+            <button>java</button>
+            <button>react</button>
+            <button>node js</button>
+        </div>
+        <div id="wrapper1">
+            <div class="article">
+                <h3>HTMl</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis alias consectetur tempora, sed fugit similique magnam quam et facere error dolor culpa nostrum quae voluptatibus cupiditate unde itaque maiores accusamus.</p>
+            </div>
+            <div>
+                <h3>css</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit sit quas quibusdam cupiditate cum optio explicabo officiis veniam ratione ipsum! Repellendus quod quasi hic saepe perferendis aut ab molestiae fugit?</p>
+            </div>
+            <div>
+                <h3>java</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam ipsam ipsum nostrum nulla numquam vitae, rem alias ad quis aliquid aperiam, qui odio. Modi minus obcaecati tempora amet. Obcaecati, ea!</p>
+            </div>
+            <div>
+                <h3>react</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat voluptatem explicabo sint dolorum enim, numquam minima itaque expedita quam modi suscipit velit neque eum eveniet. Voluptatem dolore molestiae perferendis quod?</p>
+            </div>
+            <div>
+                <h3>node js</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis, atque? Commodi expedita sint aut perspiciatis magni temporibus voluptate voluptatum, odit magnam consequuntur sunt cum itaque placeat. Suscipit ipsam minus inventore?</p>
+            </div>
+        </div>
+    </div>
+    <script>
+          let butt=document.querySelectorAll("button")
+          let divs=document.querySelectorAll(" .article") 
+          for(let i=0;i<butt.length;i++){
+           
+            butt[i].onclick=()=>{
+                for(let j=0;j<butt.length;j++)
+                    if(butt[j].classList.contains("article1")){
+                        butt[j].classList.remove("article1")
+                    }
+                    butt[i].classList.add("article1")
+                    for(let k=0;k<divs.length;k++){
+                        if(divs[k].classList.contains("article")){
+                              divs[k].classList.remove("article")
+                        }
+                        divs[i].classList.add("article")
+                        
+                    }
+                    
+                    
+                  
+          }
+            }
+            
+    </script>
+</body>
+</html>
